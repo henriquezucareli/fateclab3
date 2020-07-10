@@ -1,9 +1,3 @@
-var cartas = Array(100).fill(1).map((e, index) => [Math.floor(Math.random() *100), { name: `Carta ${index + 1}`}]);
-
-var cartasOrdenadas = cartas.sort((a, b) => a[0] - b[0]).map(([,c]) => c);
-
-
-
 function querySelector(
   pecaId,
   {
@@ -92,20 +86,18 @@ document.querySelector("#image2-1").addEventListener("click", function() {
     easterEgg("#image1", "#easterEgg");
     runSound("#error-sound");
     recolor("#image2-1", "red");
-    
+
     setTimeout(function() {
       recolor("#image2-1", "");
       easterEgg("#image1");
       visible("#peca2_2");
-      
     }, 1200);
   }
   console.log(counter2); // controle visual da variavel para saber se a logica esta certa até esse ponto
 });
 document.querySelector("#image3-1").addEventListener("click", function() {
   //(seleção do objeto        +    aguardar até que ele seja clicado)
- 
-    
+
   if (counter2 == 2) {
     visible("#peca3_3", true);
     recolor("#image3-1", "green");
@@ -120,7 +112,7 @@ document.querySelector("#image3-1").addEventListener("click", function() {
     easterEgg("#image1", "#easterEgg");
     runSound("#error-sound");
     recolor("#image3-1", "red");
-    
+
     setTimeout(function() {
       recolor("#image3-1", "");
       easterEgg("#image1");
@@ -235,6 +227,12 @@ document.querySelector("#frente").addEventListener("click", function() {
 
   var el = document.querySelector("#frente");
   // criar uma variavel e receber um objeto
+
+  querySelector("#frente", {
+    property: "position",
+    from: "0 0.1 0",
+    to: "0 0.1 -0.1"
+  });
 
   el.setAttribute(
     "animation",
