@@ -144,7 +144,7 @@ document.querySelector("#image4-1").addEventListener("click", function() {
       recolor("#image4-1", "green");
     }, 100);
     //peca4_4
-
+    runSound("#treasure");
     querySelector("#peca1_1", { to: "0 360 0", loop: "1" });
     querySelector("#peca2_2", { to: "0 360 0", loop: "1" });
     querySelector("#peca3_3", { to: "0 360 0", loop: "1" });
